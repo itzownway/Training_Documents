@@ -204,3 +204,144 @@ Next :::
 		
 			- Interactive Mode :
 		
+
+		
+######################
+Day 20: 6th Jan. 2026
+######################		
+		
+	Docker Run Command Options :::
+
+		
+		- docker run <Image_Name>		# Create and run the Container based on the Container Image.
+		
+			docker run ubuntu
+			
+		- Modes of Container Execution: 
+		
+			- Foreground/Attached Mode 		# Default 
+			
+					docker run ubuntu		# Hold the terminal during execution
+					
+					docker run ubuntu sleep 20					
+					
+			- Background/Detached Mode :
+			
+					docker run -d ubuntu sleep 20		
+		
+			- Interactive Mode :	
+			
+					docker run -it ubuntu bash 		# Create and Run the container in an interactive Mode 
+					
+					exit							# Stop the Container 
+		
+		
+		- Start Container :::
+		
+				- docker start <container_id>		# To start a container 
+				
+				Eg.: 				
+					docker start 32d360c56b7d
+		
+		- Login to the running Container :::
+		
+				- docker exec -it <container_id> bash 		# Login to a contianer 
+				
+				- exit 										# Logoff 
+				
+				
+				Eg.: 				
+					docker exec -it 32d360c56b7d bash
+					
+					exit 
+		
+		
+		- Stop Container :::	
+				
+				- docker stop <container_id>		# To stop a container 
+				
+				Eg.: 				
+					docker stop 32d360c56b7d		
+		
+		
+		- docker rm <container_id>					# Remove a container from local machine 
+
+
+		- docker rmi <image>						# Remove an Image from local machine
+		
+		
+	
+	- Port Mapping/Binding ::::
+	
+		-> Used to Map the Container port and the host port.
+		-> It used to expose the Container to internet.
+		
+		-p <host_port>:<container_port>
+		
+		Eg.: 	
+		
+			docker run -it -p 8085:8080 tomcat:8.0			# Create 1 Container 
+		
+			docker run -it -p 8086:8080 tomcat:8.0			# Ensure that the Host Port is unique!
+		
+		
+	- docker inspect <docker_component_name>				
+	
+		Eg: 
+		
+			docker inspect <container_id>
+		
+			docker inspect <image_id>
+		
+			docker inspect <docker_volume_id>
+			
+
+		
+	- Docker Container Volume ::::
+	
+		Used to maintain the persistant data.		
+		
+		Sign_in Service: 		
+		
+		3 - Tier Application :
+		
+			Front_End Layer		--> User Interface  	=> c1
+			
+			Application Layer 	--> Business Logic 		=> c2 
+		
+			Back_End Layer 		--> Data Base 			=> c3 
+		
+		
+		Working with Volumes :
+		
+		
+			docker volume list 					# To get the list of volumes 			
+			
+			docker volume create <vol_name>		# To Create a Docker Volume 	
+
+			Eg.: 
+			
+				docker volume create pl-vol1	
+			
+			docker inspect <docker_volume_id>
+			
+			docker run -it ubuntu bash
+			
+			docker run -it --mount source=pl-vol1,destination=/pl-vol1 ubuntu bash
+			
+		
+Next :::
+
+		
+	- Create the Container Images ::::
+	
+		- Docker Commit :::
+				
+				- It is used to Create a Container Image based on the existing Container reference.
+				- Used by the Infra-Structure Management Team
+			
+		
+		- Docker Build :::
+	
+				- It is used to Create a Container Image from the scratch based on the Dockerfile Instructions
+				- Used by the Developers to Containerize the Applications
