@@ -1,1 +1,61 @@
-AWS Documents
+	
+#######################
+Day 33: 29th Jan. 2026
+#######################	
+
+
+	AWS Cloud Platform :::
+	
+	==> AWS Cloud Practioner/Associate :::
+	
+	
+	Fundamentals of Cloud Computing 
+	
+	AWS Cloud Computing Services 
+	
+	What is Cloud Computing ??
+	
+	Why we need Cloud Computing/Platform ??
+	
+	
+	Use Case: Develop and Host a Web Application :::
+	
+		Create LMS Web Portal		==> www.loksaieta.com 
+			
+			- Search for course 
+			- Read Course contents 
+			- Enrole for Course 
+			- Register for Course 
+				-> Payment 
+				-> SMS/EMail/Whatapps Notifications
+			- Join the Classes 
+			- Access the Class Materials 
+			- Access the Class Records 
+			
+			
+	I need Infra-Structure to Develop and Host this Web Application ::
+	
+	On-Premises Environments :
+	
+		- Dev 
+		- Build
+		- Test 
+		- Prod 
+		
+	Highly scalable/reliable/Secured IT Infra-Structure --> Computing Devices, Storage, Networking, Security
+	
+	Cloud Platform :
+	
+
+	AWS Infra-Structure ::::	https://aws.amazon.com/about-aws/global-infrastructure/
+		
+		- AWS Region 
+		
+Next ::
+
+	AWS Intro 
+
+	Billing Management 
+
+	IAM Services
+		
